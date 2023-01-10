@@ -35,3 +35,16 @@ Suppose you are form INDIA and you want to access a particular website of USA wh
  React was designed to be a flexible and efficient Javascript library to make the user interfaces.
 
  React is named react because of its ability to **react** to changes in data. When the data in a React component changes, React will automatically re-render the component so that it reflects the new data. This makes it easy to create user interfaces that always look up-to-date.
+
+
+ # What is Cross Origin in Script Tag ?
+
+ The crossorigin attribute on a script tag specifies that **CORS** is supported when loading an external script file from a third party server or domain.
+
+**CORS** is a standard mechanism used to retrieve files from other domains.
+
+## Syntax
+
+**tagname crossorigin**
+
+`Note:  This attribute is only relevant when the file is retrieved from a third party server. Do not use this attribute when the file is on your own server.`
