@@ -43,6 +43,8 @@ Suppose you are form INDIA and you want to access a particular website of USA wh
 
 **CORS** is a standard mechanism used to retrieve files from other domains.
 
+In case of react when we add CDN links inside the script tag so the CORS allow us to use those links which is present on another server or domain.
+
 ## Syntax
 
 **tagname crossorigin**
