@@ -1,5 +1,5 @@
 
-## Q what is the Diff b/w Library and a Framework ?
+# Q what is the Diff b/w Library and a Framework ?
 
 ## Library -> Library is like building your home from the ground up. The house can be made in any style you prefer and the rooms can be arranged and decorated however you like.
 
@@ -16,3 +16,18 @@ A framework is the foundation in which the developer build the applications for 
 `when you use a framework, the flow is controlled by the framework. The framework instructs you where to put your code, but it will call your code as required.`
 
 **Example -> VueJs, Angular JS**
+
+
+# Q What is CDN? Why do we use it?
+
+## CDN -> Content delievery network is bascially a group of servers which is distributed geographically that speeds up the delievery of web content by bringing it closer to the user.Across the globe data centers uses a caching process that temporarily stores copies and files so that you can access web content more quickly.
+
+`You could think of a CDN like an ATM. Having a cash machine on practically every corner makes it fast and efficient to get money. There’s no wait time in long bank lines, and the ATMs are placed in many convenient locations for immediate access.`
+
+**Example**
+
+Suppose you are form INDIA and you want to access a particular website of USA which is running on their server
+ you would experience slow content load times if the request had to travel all the way across the Country. To remove this, a CDN would store a cached version of the USA website content in multiple geographical locations around the world, also called **“points of presence” (PoPs)**. These PoPs contain their own caching servers and are responsible for delivering that content close to where you’re located in INDIA.
+
+
+ 
