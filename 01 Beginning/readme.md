@@ -30,4 +30,8 @@ Suppose you are form INDIA and you want to access a particular website of USA wh
  you would experience slow content load times if the request had to travel all the way across the Country. To remove this, a CDN would store a cached version of the USA website content in multiple geographical locations around the world, also called **“points of presence” (PoPs)**. These PoPs contain their own caching servers and are responsible for delivering that content close to where you’re located in INDIA.
 
 
- 
+ # Why is React known as React?
+
+ React was designed to be a flexible and efficient Javascript library to make the user interfaces.
+
+ React is named react because of its ability to **react** to changes in data. When the data in a React component changes, React will automatically re-render the component so that it reflects the new data. This makes it easy to create user interfaces that always look up-to-date.
