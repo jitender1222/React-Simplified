@@ -55,7 +55,7 @@ A local .gitignore file is usually placed in the root directory of a project. Yo
 
 1. Files that contain sensitive data and personal information. Some examples of such files are files with your credentials (username and password) and files with environment variables like .env files.
 
-2. Runtime files, such as .log files. They provide information on the Operating System’s usage activities and errors, as well as a history of events that have taken place within the OS.
+2. Runtime files, such as .log files. They provide information on the Operating System’s usage activities and errors, as well as a history of events that have taken place within the OS
 
 
 # - What is the difference between `package.json` and `package-lock.json` ?
