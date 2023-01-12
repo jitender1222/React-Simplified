@@ -63,3 +63,35 @@ A local .gitignore file is usually placed in the root directory of a project. Yo
 ## Package.json are the file which store our all dependencies which are required by our project. `But` Package.lock.json it will install the exact latest version of that package in your project and save the dependency in package.json with a carat (^) sign.
 
  when you or any other user will clone the project and run the command “npm i”, it will install the exact same version saved in package-lock.json file and you will able to generate the same results as you developed with that particular package.
+
+# - What is `node_modules` ? Is it a good idea to push that on git?
+
+## Modules is basically a Javascript Code or a Directory which includes a .js files.Modules is just a piece of code which helps developers to follow `DRY`(Don't Repeat YourSelf) principle.They also helps developer to break down the complex logic into small simple steps.
+
+## There are basically `3` types of nodeModules
+
+1. Built-in modules
+
+2. Local modules
+
+3. Third-party modules
+
+**It is not a good idea to push node_modules to the git beacuse node modules are very large in size and also If you commit node_modules it means any developer can change any dependency with ease (it's called “monkey patching”), and this definitely will lead to a problem: when you will update this changed dependency, old changes will be lost, and you have to solve that. You never will be sure that dependency of certain version have the same code that you got initially.**
+
+
+# What is the `dist` folder?
+
+## dist/: The shortform dist stands for distributable and it refers to a directory where files will be stored that can be directly used by others without the need to compile or minify the source code that is being reused.
+
+**Example** -> If i want to use the source code of Javascript files usually js code is minified for use in production.Therefore if we want to use Js library it is advisable to put the plain source code into the src directory and the minified version into the dist (distributable) directoy, so others can grab the minified version right away without having to minify it themselves.
+
+There may be a slight difference between these three:
+
+1. build/-> is a compiled version of your src/ but not a production-ready.
+
+2. dist/-> is a production-ready compiled version of your code.
+
+3. public/-> usually used as the files runs on the browser. which it may be the server-side JS and also include some HTML and CSS.
+
+
+
