@@ -95,3 +95,8 @@ There may be a slight difference between these three:
 
 
 
+# - What is `browserlists`?
+
+## BrowserList is basically a tool that specify which browser should be supported in your frontend app by specifying queries in config file.It is supported by react angular vue etc but it is not limited to them.
+
+As Javascript evolve many neew verisons and new things comes so the browserlist helps the transpilers and bundlers know what browser you want to support so they can group browser in different category and generate different seperate bundlers.
