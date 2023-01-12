@@ -50,3 +50,13 @@ In case of react when we add CDN links inside the script tag so the CORS allow u
 **tagname crossorigin**
 
 `Note:  This attribute is only relevant when the file is retrieved from a third party server. Do not use this attribute when the file is on your own server.`
+
+
+# Q What is diference between React and ReactDOM ?
+
+## React -> It is basically a Javascript Library used to create user interfaces. React is nothing to do with the web browser or web for that matter.
+
+## ReactDOM -> React dom is a complimentary library to react which basically attach the react to the browser dom.By which we can see all of the things in the browser.
+
+
+whenever we have to use **Component,Classes,Elements** etc. we have to import react and whenever we have to display all the content to the browser we use render() to use this we have to import a different library named as **REACTDOM**
