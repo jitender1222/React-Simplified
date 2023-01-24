@@ -108,3 +108,13 @@ Now React knows that the element with key '2014' is the new one, and the element
 That's why react can update the DOM fastly.
 
 
+
+## Why do we need keys in react??
+
+### Keys help React identify which items have changed, are added, or are removed and due to this the performance of our app is improved.
+
+## Can we use index as keys in React?
+
+###  Usage of index as key is ok, if you are developing a list of items that isn’t supposed to be changed from one state to another. For example, selector for filter where all items are defined and never changed during user interactions. But if list of items is supposed to have features of deleting, resorting, adding new items— in this case, you have to take care of the key in a proper way to avoid any performance issues and avoid unexpected bugs.
+
+
