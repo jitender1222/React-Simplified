@@ -117,4 +117,25 @@ That's why react can update the DOM fastly.
 
 ###  Usage of index as key is ok, if you are developing a list of items that isn’t supposed to be changed from one state to another. For example, selector for filter where all items are defined and never changed during user interactions. But if list of items is supposed to have features of deleting, resorting, adding new items— in this case, you have to take care of the key in a proper way to avoid any performance issues and avoid unexpected bugs.
 
+## What is props in React?
 
+### The props are a type of object were we can store our value.In react js the data can be passed from one component to another using these props from child to parent it is similar to how the arguement is passed inside the function.Inside the component, we can add the attributes called props; however, we cannot change or modify props inside the component as they are immutable.
+
+
+`How to pass props `
+
+*1stWay*
+
+function App(props){
+    return (
+        <div>Hi {props.name}</div>
+    )
+}
+
+*2nd Way*
+
+function App({name}){   <!--- here we destructure directly the name and we can use easily now we didn't have to write the props.name -->
+    return (
+        <div>Hi {name}</div>
+    )
+}
