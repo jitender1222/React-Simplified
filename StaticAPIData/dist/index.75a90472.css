@@ -1,0 +1,42 @@
+.flex {
+  justify-content: space-between;
+  display: flex;
+}
+
+.list {
+  cursor: pointer;
+  justify-content: space-between;
+  gap: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  list-style: none;
+  display: flex;
+}
+
+.img {
+  width: 150px;
+  border-radius: 20%;
+}
+
+.food {
+  width: 250px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.cards {
+  width: 20%;
+  border: 1px solid #000;
+  border-radius: 10%;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-left: 20px;
+  display: flex;
+}
+
+.body {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+/*# sourceMappingURL=index.75a90472.css.map */

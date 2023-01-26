@@ -139,3 +139,8 @@ function App({name}){   <!--- here we destructure directly the name and we can u
         <div>Hi {name}</div>
     )
 }
+
+
+## What is a Config Driven UI ?
+
+

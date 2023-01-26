@@ -1,0 +1,39 @@
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.list{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    gap: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size:20px;
+}
+.img{
+    width: 150px;
+    border-radius:20%;
+}
+.food{
+    margin-top:20px;
+    width: 250px;
+    padding: 10px;
+}
+
+.cards{
+    width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    margin-top:50px;
+    margin-left: 20px;
+    border-radius: 10%;
+}
+
+.body{
+    display: flex;
+    flex-wrap: wrap;
+}
