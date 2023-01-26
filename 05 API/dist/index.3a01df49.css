@@ -1,0 +1,44 @@
+.flex {
+  justify-content: space-between;
+  display: flex;
+}
+
+.list {
+  cursor: pointer;
+  justify-content: space-between;
+  gap: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  list-style: none;
+  display: flex;
+}
+
+.img {
+  width: 150px;
+  border-radius: 20%;
+}
+
+.cards {
+  width: 20%;
+  border: 1px solid #000;
+  border-radius: 10%;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-left: 20px;
+  display: flex;
+}
+
+.food {
+  width: 150px;
+}
+
+.hero {
+  margin-top: 50px;
+}
+
+.resCard {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+/*# sourceMappingURL=index.3a01df49.css.map */
