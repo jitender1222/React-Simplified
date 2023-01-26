@@ -64,28 +64,29 @@ root.render(container);
 //********************** Functional Component ************************** *//
 
 
-const Heading=()=>{
-    return(
-        <h1>Hello world from heading-1</h1>
-    )
-}
+// const Heading=()=>{
+//     return(
+//         <h1>Hello world from heading-1</h1>
+//     )
+// }
 
-const Heading2=()=>(
-    <h1>Hello world from headding-2</h1>
-)
+// const Heading2=()=>(
+//     <h1>Hello world from headding-2</h1>
+// )
 
-const container=React.createElement(
-    "div",
-    {
-        id:"cont"
-    },
-    [<Heading />,<Heading2 />]
-)
+// const container=React.createElement(
+//     "div",
+//     {
+//         id:"cont",
+//         key:"1"
+//     },
+//     [<Heading />,<Heading2 />]
+// )
 
-const root=ReactDOM.createRoot(document.getElementById("root"));
+// const root=ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(container);
-
-
+// root.render(container);
 
 
+
+// **************** composing component -> when we pass compnent inside the component this is known as composing component ***//

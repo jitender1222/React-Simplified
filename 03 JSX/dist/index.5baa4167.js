@@ -2896,24 +2896,104 @@ function hmrAcceptRun(bundle, id) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _react = require("React");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactDom = require("react-dom");
-var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
-const heading = (0, _reactDefault.default).createElement("h1", {
-    id: "title"
-}, "Hello");
-const heading2 = (0, _reactDefault.default).createElement("h1", {
-    id: "title"
-}, "Hello world");
-const container = (0, _reactDefault.default).createElement("div", {
-    id: "cont"
-}, [
-    heading,
-    heading2
-]);
-const root = (0, _reactDomDefault.default).createRoot(document.getElementById("root"));
+var _client = require("react-dom/client"); // created a heading which is nested over h1 and h2 tag
+ /* 
+const heading=React.createElement(
+    "h1",
+    {
+        id:"title"
+    },
+    "Hello"
+);
+const heading2=React.createElement(
+    "h1",
+    {
+        id:"title"
+    },
+    "Hello world"
+);
+
+const container=React.createElement(
+    "div",
+    {
+        id:"cont"
+    },
+    [heading,heading2]
+)
+
+const root=ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(container);
 
-},{"React":"g3wPi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","react-dom":"j6uA9"}],"g3wPi":[function(require,module,exports) {
+*/  //**************************By using JSX  ****************************//
+ // const heading=(
+ //     <h1>Hello world from heading-1</h1>
+ // );
+ // const heading2=(
+ //     <h1>Hello world from heading2</h1>
+ // )
+ // const container=React.createElement(
+ //     "div",
+ //     {
+ //         id:"cont"
+ //     },
+ //     [heading,heading2]
+ // )
+ // const root=ReactDOM.createRoot(document.getElementById("root"));
+ // root.render(container);
+ //********************** Functional Component ************************** *//
+ // const Heading=()=>{
+ //     return(
+ //         <h1>Hello world from heading-1</h1>
+ //     )
+ // }
+ // const Heading2=()=>(
+ //     <h1>Hello world from headding-2</h1>
+ // )
+ // const container=React.createElement(
+ //     "div",
+ //     {
+ //         id:"cont",
+ //         key:"1"
+ //     },
+ //     [<Heading />,<Heading2 />]
+ // )
+ // const root=ReactDOM.createRoot(document.getElementById("root"));
+ // root.render(container);
+ // **************** composing component -> when we pass compnent inside the component this is known as composing component ***//
+var _clientDefault = parcelHelpers.interopDefault(_client);
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","React":"g3wPi","react-dom/client":"lOjBx"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"g3wPi":[function(require,module,exports) {
 "use strict";
 module.exports = require("53cfbbadb27732e7");
 
@@ -4783,37 +4863,28 @@ module.exports = require("53cfbbadb27732e7");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
+},{}],"lOjBx":[function(require,module,exports) {
+"use strict";
+var m = require("fb69f0b524f872b7");
+var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+exports.createRoot = function(c, o) {
+    i.usingClientEntryPoint = true;
+    try {
+        return m.createRoot(c, o);
+    } finally{
+        i.usingClientEntryPoint = false;
+    }
 };
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
+exports.hydrateRoot = function(c, h, o) {
+    i.usingClientEntryPoint = true;
+    try {
+        return m.hydrateRoot(c, h, o);
+    } finally{
+        i.usingClientEntryPoint = false;
+    }
 };
 
-},{}],"j6uA9":[function(require,module,exports) {
+},{"fb69f0b524f872b7":"j6uA9"}],"j6uA9":[function(require,module,exports) {
 "use strict";
 function checkDCE() {
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === "undefined" || typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== "function") return;
