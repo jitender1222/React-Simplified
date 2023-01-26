@@ -18,3 +18,46 @@ Ans-> A shimmer is a version of UI that does not contain the actual data but it 
 For example-> when we Calls an API we see in some websites before loading the data onto the screen there is a loader which keeps rotating which describes that the data will come but this is not the great `User Experience` so instead of using loader we can use a **shimmer effect**.
 
 It gives people an idea of what’s about to come and what’s happening (it's currently loading) when a page full of content/data takes more than 3 - 5 seconds to load.
+
+
+## What is conditional rendering explain with example ?
+
+Ans-> Your components will often need to display different things depending on different conditions. In React, you can conditionally render JSX using JavaScript syntax like if statements, &&, and ? : operators.
+
+For example
+
+    function Item({ name, isPacked }) {
+    return (
+        <li className="item">
+        {isPacked ? (
+            <del>
+            {name + ' ✔'}
+            </del>
+        ) : (
+            name
+        )}
+        </li>
+    );
+    }
+
+    export default function PackingList() {
+    return (
+        <section>
+        <h1>Sally Ride's Packing List</h1>
+        <ul>
+            <Item 
+            isPacked={true} 
+            name="Space suit" 
+            />
+            <Item 
+            isPacked={true} 
+            name="Helmet with a golden leaf" 
+            />
+            <Item 
+            isPacked={false} 
+            name="Photo of Tam" 
+            />
+        </ul>
+        </section>
+    );
+    }
