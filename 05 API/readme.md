@@ -61,3 +61,15 @@ For example
         </section>
     );
     }
+
+## What is CORS ?
+
+Ans-> `CORS stands for cross origin resource sharing` which is a mechanism which tells the browser whether the this web app share the resouces with the other web apps or not. If the origin of both of the web apps is same then they can easily share the resouces with each other otherwise they have to use the CORS mechanism .
+
+What is mean by origin -> Let's say if `jitendersingh.in` has to communicate with `google.com` it would not allow me to share anything also it wouldn't allow me to access `subdomain` and websites which is on different `PORT`.
+
+When this CORS become standardize we can easily access all these things.
+
+## How this CORS work?
+
+Ans-> Let's say we have two different Apps **A and B** on different domains and they want to share resources now the CORS become standarized what happen is **CORS Preflight Mechanism** is followed in these before requesting the actual API call first a preflight call will be made from A to B and the browser uses mechanism of cors which uses extra headers to verify this call first. Now the B took the responsibilty to check whether this call is valid or not if the call is valid then it will send the request back to A then the browser knows that yes this call is valid. Now the actual call is made and the resouce sharing occur between these two apps.
