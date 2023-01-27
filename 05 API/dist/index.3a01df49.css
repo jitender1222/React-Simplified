@@ -20,24 +20,40 @@
 
 .cards {
   width: 20%;
-  border: 1px solid #000;
-  border-radius: 10%;
-  flex-wrap: wrap;
+  background-color: #deb887;
+  border-radius: 10px;
+  flex-flow: column wrap;
   margin-top: 50px;
   margin-left: 20px;
+  padding: 10px;
+  transition: all .75s;
   display: flex;
+  box-shadow: 4px 4px 2px #fff;
 }
 
-.food {
-  width: 150px;
+.cards:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.food-img {
+  width: 250px;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .hero {
   margin-top: 50px;
 }
 
-.resCard {
+.subHeading-1 {
+  justify-content: space-between;
+  display: flex;
+}
+
+.restaurant-list {
   flex-wrap: wrap;
+  justify-content: center;
   display: flex;
 }
 
