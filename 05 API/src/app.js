@@ -10,6 +10,7 @@ import About from "./Components/About";
 import Error from "./Components/Error";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
+import RestraurantMenu from "./Components/RestraurantMenu";
 
 const App=()=>{
     return(
@@ -38,6 +39,10 @@ const AppRouter=createBrowserRouter([
             {
                 path:"/contact",
                 element:<Contact />
+            },
+            {
+                path:"/restraurant/:id",
+                element:<RestraurantMenu />
             }
         ]
     },
