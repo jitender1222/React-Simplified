@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Header = () => {
+  
+  const [button,setButton]=useState(true);
   return (
     <div className="flex">
       <div>
@@ -18,6 +20,21 @@ const Header = () => {
           <li>About</li>
           <li>Contact</li>
           <li>Call Us</li>
+
+          <div>
+            {
+              button?<button className="btn" 
+              onClick={()=>{
+                setButton(false);
+              }}>
+                Login</button> 
+                :<button className="btn" 
+                onClick={()=>{
+                  setButton(true);
+              }}
+              >LogOut</button>
+            }
+          </div>
         </ul>
       </div>
     </div>

@@ -1,9 +1,9 @@
 import React from "react";
 
-const Shimmer=()=>{
+const Shimmer = () => {
     return (
-        <h1>Wait Ui loading............................</h1>
-    )
-}
+        <h1>ui loading wait...</h1>   
+    );
+  };
 
 export default Shimmer;
