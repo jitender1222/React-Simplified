@@ -22,6 +22,8 @@ const Hero=()=>{
 
   const [searchText,setSearchText]=useState("");
 
+  const [error,setError]=useState("");
+
 
   const fetchData=async ()=>{
     
@@ -32,9 +34,30 @@ const Hero=()=>{
     setFilterText(json?.data?.cards[2]?.data?.data?.cards);
   }
 
+  const searchData=(searchText,restaurant)=>{
+
+    if(searchText!==" "){
+      const data=filterData(searchText,restaurant);
+      setFilterText(data);
+      setError("");
+
+    if(data.length===0)
+      setError("No matches found");
+  }
+}
+
   useEffect(()=>{
     fetchData();
   },[])
+
+  if(restraunt===null) return null;
+
+  // {setError && <div className="error-container">{error}</div>}
+
+  
+
+  console.log(error);
+
   return restraunt?.length===0? (<Shimmer />):(
     <>
     <div className="input-type">
@@ -44,8 +67,7 @@ const Hero=()=>{
       )}}
       ></input>
       <button onClick={()=>{
-        const data=filterData(searchText,restraunt);
-        setFilterText(data);
+        searchData(searchText,restraunt);
       }}>Search</button>
     </div>
     <div className="restaurant-list">
