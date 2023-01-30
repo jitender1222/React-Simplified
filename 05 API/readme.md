@@ -127,4 +127,34 @@ A portrayal of a traditional application needing to request a full rendering for
 By transferring the painting work (or page rendering) from the server to the client (you), the page can be dynamically rewritten instead of going through an entire reload. This makes things a whole lot faster.
 
 
+## What is difference between Client Side Routing and Server Side Routing?
+
+Ans -> In server-side routing what usually happens when you are entering a URL for the first time or you want to change the page, maybe you click on the about us section or the navbar, the browser immediately detects that change in the URL then the browser makes an HTTP request to the server then the server re-renders the HTML into the application, now this can be very expensive and would require time-based on the internet speed and some other factors.
+
+In client side routing we don't need to go through all these stages, although when we first load the application that is inputing the web address the full react app is being rendered from the server, but after that when you want to change pages, maybe you click on the navbar the browser watches for change in the URL and immediately it detects change in the URL it uses the HTML5 history API to fetch the page that has already been loaded in when the application was first loaded in and returns it to the browser.
+
+
+Imagine the user clicking on a simple link: <a href="/hello">Hello!</a>
+
+**On a webapp that uses server side routing:**
+The browser detects that the user has clicked on an anchor element.
+
+It makes an HTTP GET request to the URL found in the href tag
+
+The server processes the request, and sends a new document (usually HTML) as a response.
+
+The browser discards the old webpage altogether, and displays the newly downloaded one.
+
+**If the webapp uses client side routing:**
+
+The browser detects that the user has clicked on an anchor element, just like before.
+
+A client side code (usually the routing library) catches this event, detects that the URL is not an external link, and then prevents the browser from making the HTTP GET request.
+
+The routing library then manually changes the URL displayed in the browser (using the HTML5 history API, or maybe URL hashbangs on older browsers)
+
+The routing library then changes the state of the client app. For example, it can change the root React/Angular/etc component according to the route rules.
+
+The app (particularly the MVC library, like React) then processes state changes. It renders the new components, and if necessary, it requests new data from the server. But this time the response isn't necessarily an entire webpage, it may also be "raw" data, in which case the client-side code turns it into HTML elements.
+
 
