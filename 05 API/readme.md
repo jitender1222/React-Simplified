@@ -73,3 +73,58 @@ When this CORS become standardize we can easily access all these things.
 ## How this CORS work?
 
 Ans-> Let's say we have two different Apps **A and B** on different domains and they want to share resources now the CORS become standarized what happen is **CORS Preflight Mechanism** is followed in these before requesting the actual API call first a preflight call will be made from A to B and the browser uses mechanism of cors which uses extra headers to verify this call first. Now the B took the responsibilty to check whether this call is valid or not if the call is valid then it will send the request back to A then the browser knows that yes this call is valid. Now the actual call is made and the resouce sharing occur between these two apps.
+
+## What are various ways to add images into our App? Explain with code examples ??
+
+Ans -> There are several different ways of inserting images in React.
+
+**Using the image tag**
+
+Using the <img/> tag you will need to provide it with two values:
+
+“src” (source): the URL or the path of the image.
+
+“alt” (alternate): an alternate text in case of the image not being available.
+
+`<img src="https://reactjs.org/logo-og.png" alt="React Image" />`
+
+**Adding an image from your computer**
+
+
+    import reactLogo from "./reactLogo.png";
+
+    export default function App() {
+    
+    return <img src={reactLogo} alt="react logo" />
+    }
+
+**Inserting a local background image**
+
+    import reactLogo from './reactLogo.png'
+
+    export default function App() {
+    return <div style={{ backgroundImage: reactLogo }}>Overlay text</div>
+    }
+
+## What is SPA ?
+
+Ans -> Single page application is a single page where all the info are kept in only one only some of the few pieces need to updated at a time.
+
+If we click on a button and the button has some of the functionality so the in case of normal website the whole page wil get render but in **SPA** only that thing is changed rest of the things will remain same.
+
+Let’s say you visit a website and view a painting of a house and a tree. Traditional multi-page websites paint the entire picture for you on the server and send it over to your browser.
+
+The SPA send all the raw data and the components which is required so now the SPA chooses how to display the right pieces and render it on the browser.
+
+But the speed of single page applications comes in when you request new content — like clicking on “next,” filtering results, opening an email, or in our case, asking to see a different tree.
+
+**On a traditional website, your request for a new tree would cause the server to repaint the entire picture and send it back.**
+
+A portrayal of a traditional application needing to request a full rendering for every change whenever there is new data to input.
+
+**With a single page application, the server says, “Hey, I’ve got a new tree for you, but you’ve already got the house so just leave that the same.” Then, it sends the page updated instructions for a new tree and the paint to make it.**
+
+By transferring the painting work (or page rendering) from the server to the client (you), the page can be dynamically rewritten instead of going through an entire reload. This makes things a whole lot faster.
+
+
+
