@@ -5,6 +5,7 @@ import Card from "./Card";
 import { swiggy_api_URL } from "../../config";
 
 import Shimmer from "../Components/Shimmer";
+import { Link } from "react-router-dom";
 
 function filterData(searchText, restaurants) {
   const filterData = restaurants.filter((restaurant) =>
@@ -29,7 +30,6 @@ const Hero=()=>{
     
     const data=await fetch(swiggy_api_URL);
     const json=await data.json();
-    console.log(json);
     setRestraunt(json?.data?.cards[2]?.data?.data?.cards);
     setFilterText(json?.data?.cards[2]?.data?.data?.cards);
   }
@@ -54,10 +54,6 @@ const Hero=()=>{
 
   // {setError && <div className="error-container">{error}</div>}
 
-  
-
-  console.log(error);
-
   return restraunt?.length===0? (<Shimmer />):(
     <>
     <div className="input-type">
@@ -73,7 +69,9 @@ const Hero=()=>{
     <div className="restaurant-list">
       {
         filterText.map((item)=>{
-          return <Card {...item.data} key={item.data.id} />
+          return <Link to={"/restraurant/"+item.data.id}  key={item.data.id} >
+          <Card {...item.data}/>
+          </Link>
         })
       }
     </div>
