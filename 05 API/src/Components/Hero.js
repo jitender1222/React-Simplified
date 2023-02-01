@@ -7,13 +7,8 @@ import { swiggy_api_URL } from "../../config";
 import Shimmer from "../Components/Shimmer";
 import { Link } from "react-router-dom";
 
-function filterData(searchText, restaurants) {
-  const filterData = restaurants.filter((restaurant) =>
-    restaurant?.data?.name.toLowerCase().includes(searchText.toLowerCase())
-  );
-  return filterData;
-}
-
+import { filterData } from "../Utils/helper";
+import useOnline from "../Utils/useOnline";
 
 const Hero=()=>{
 
@@ -50,6 +45,12 @@ const Hero=()=>{
     fetchData();
   },[])
 
+  const isOnline=useOnline();
+
+  if(!isOnline){
+    return <h1>Oflline please check your internet connection</h1>
+  }
+
   if(restraunt===null) return null;
 
   // {setError && <div className="error-container">{error}</div>}
@@ -69,9 +70,7 @@ const Hero=()=>{
     <div className="restaurant-list">
       {
         filterText.map((item)=>{
-          return <Link to={"/restraurant/"+item.data.id}  key={item.data.id} >
-          <Card {...item.data}/>
-          </Link>
+          return <Link to={"/restraurant/"+item.data.id}  key={item.data.id} > <Card {...item.data}/> </Link>
         })
       }
     </div>

@@ -37,7 +37,7 @@
 }
 
 .food-img {
-  width: 250px;
+  width: 200px;
   margin-top: 20px;
   margin-left: 20px;
 }
@@ -52,6 +52,7 @@
 }
 
 .restaurant-list {
+  width: 20%;
   flex-wrap: wrap;
   justify-content: center;
   display: flex;

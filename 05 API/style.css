@@ -38,7 +38,7 @@
 }
 
 .food-img{
-    width:250px;
+    width:200px;
     margin-left: 20px;
     margin-top: 20px;
 }
@@ -56,4 +56,5 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 20%;
 }
